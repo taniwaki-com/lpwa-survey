@@ -424,6 +424,58 @@
         
         
         <section style="background: #fff3cd; border-left: 5px solid #f39c12; padding: 20px; margin: 20px 0;">
+                <!-- 回答者情報入力セクション -->
+        <section style="background: white; padding: 25px; margin: 20px 0; border-radius: 10px; border-left: 5px solid #2ecc71; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+            <h2>👤 回答者情報</h2>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                修士論文の送付および研究の信頼性確保のため、以下の情報をご入力ください。<br>
+                <strong style="color: #e74c3c;">※ 赤字項目は必須です。</strong>
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <label for="respondent-name" style="display: block; margin-bottom: 8px; font-weight: bold; color: #2c3e50;">
+                        お名前 <span style="color: #e74c3c;">*</span>
+                    </label>
+                    <input type="text" id="respondent-name" required 
+                           placeholder="例：山田 太郎"
+                           style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1em; background: #f9f9f9;">
+                </div>
+                
+                <div>
+                    <label for="respondent-email" style="display: block; margin-bottom: 8px; font-weight: bold; color: #2c3e50;">
+                        メールアドレス <span style="color: #e74c3c;">*</span>
+                    </label>
+                    <input type="email" id="respondent-email" required 
+                           placeholder="例：taro.yamada@example.com"
+                           style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1em; background: #f9f9f9;">
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="respondent-organization" style="display: block; margin-bottom: 8px; font-weight: bold; color: #2c3e50;">
+                    ご所属（企業・団体名）
+                </label>
+                <input type="text" id="respondent-organization" 
+                       placeholder="例：○○株式会社 / △△大学"
+                       style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1em; background: #f9f9f9;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="respondent-role" style="display: block; margin-bottom: 8px; font-weight: bold; color: #2c3e50;">
+                    役職・専門分野
+                </label>
+                <input type="text" id="respondent-role" 
+                       placeholder="例：技術部長 / IoT事業担当"
+                       style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1em; background: #f9f9f9;">
+            </div>
+            
+            <p style="font-size: 0.9em; color: #7f8c8d; margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                📧 完成した修士論文は、入力いただいたメールアドレスに送付いたします。<br>
+                🔒 入力された個人情報は論文送付目的のみに使用し、第三者に提供することはありません。
+            </p>
+        </section>
+
 		    <h3>🔒 調査への参加にあたって</h3>
 		    
 		    <div class="consent-item">
@@ -3697,14 +3749,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>※1 日本円換算: 比較のため 1USD = 150.0円 で算出</li>
-                        <li>※2 推定営業利益率: セグメント粗利率 − 全社期間費用率で算出</li>
-                        <li>※3 LoRa-enabled Products売上高: AMSWセグメント実績より抽出</li>
-                    </ul>
-                </div>
                 <h3 style="color: #34495e; margin: 20px 0 10px 0;">🗓️ 簡単な年表まとめ (LPWA事業特化)</h3>
                 <table style="width: 100%; border-collapse: collapse; margin: 15px 0; background: white;">
                     <thead>
@@ -3773,14 +3817,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>※1 日本円換算: 1人民元 = 21.5円で換算</li>
-                        <li>※2 推定営業利益率: セグメント粗利率から算出</li>
-                        <li>※3 IoT通信モジュール事業の数値</li>
-                    </ul>
-                </div>
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
             <div class="company-data" id="zte">
@@ -3810,14 +3846,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -3848,14 +3876,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -3886,14 +3906,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -3924,14 +3936,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -3962,14 +3966,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4000,14 +3996,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4038,14 +4026,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4076,14 +4056,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4114,14 +4086,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4152,14 +4116,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4190,14 +4146,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4228,14 +4176,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4266,14 +4206,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4304,14 +4236,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4342,14 +4266,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4380,14 +4296,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4418,14 +4326,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4456,14 +4356,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4494,14 +4386,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4532,14 +4416,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4570,14 +4446,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4608,14 +4476,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4646,14 +4506,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -4684,14 +4536,6 @@
                     </tbody>
                 </table>
 
-                <h3 style="color: #34495e; margin: 20px 0 10px 0;">注釈・算出ロジック</h3>
-                <div style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 5px;">
-                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                        <li>データ：企業営業率.pdf から抽出した2024年度実績</li>
-                        <li>推定営業利益率: セグメント粗利率から全社期間費用率を減算して算出</li>
-                        <li>詳細な計算式・注釈はPDF該当ページを参照</li>
-                    </ul>
-                </div>
 
                 <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
             </div>
@@ -5071,7 +4915,7 @@ document.addEventListener('touchmove', function(e) {
 });
 
 // Google Apps ScriptのウェブアプリURL（ステップ2で取得）
-const SURVEY_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwdKqyAv1XT9mgI3eeAsEh_hevTLowTiN3AwfaqoKwYCW0286Jx9ikLWJxjcX42BLkd/exec";
+const SURVEY_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxt_FpC3wPsRlm1dFNhz9UxGHM5JRaHLxVwifKnpC27LitK7QlaBzWCxIm87PYbpruX/exec";
 
 function submitSurvey() {
     const btn = document.getElementById('submit-survey-btn');
