@@ -892,9 +892,34 @@
 
             </table>
         </section>
-        <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #f8f9ff, #e8f4f8); border-radius: 15px;">
+<!-- 📝 回答者情報セクション -->
+<section style="background: white; padding: 25px; margin: 20px 0; border-radius: 10px; border-left: 5px solid #3498db; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+    <h3 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 20px;">📝 回答者情報</h3>
+    
+    <div style="max-width: 600px; margin: 0 auto;">
+        <!-- お名前入力欄 -->
+        <div style="margin-bottom: 10px;">
+            <label for="respondent-name" style="display: block; margin-bottom: 8px; font-weight: bold; color: #2c3e50; font-size: 1.1em;">
+                お名前（必須） <span style="color: #e74c3c;">*</span>
+            </label>
+			<input type="text" 
+			       id="respondent-name"
+			       placeholder="例：山田 太郎" 
+			       style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;"
+			       required>
+            <small style="color: #7f8c8d; display: block; margin-top: 5px;">※ データ管理用です。論文では個人名は使用しません。</small>
+        </div>
+    </div>
+</section>
+
+<!-- 📤 アンケート送信 -->
+<div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #f8f9ff, #e8f4f8); border-radius: 15px;">
     <h3 style="color: #2c3e50; margin-bottom: 20px;">📤 アンケート送信</h3>
-    <p style="margin-bottom: 20px; color: #666;">回答が完了しましたら、下のボタンを押して送信してください。</p>
+    
+    <p style="margin-bottom: 20px; color: #666; font-size: 0.95em; line-height: 1.6;">
+        以下のボタンをクリックすることで、上記の調査概要およびデータの取り扱いに同意したものとみなされます。<br>
+        回答が完了しましたら、送信してください。
+    </p>
     
     <button id="submit-survey-btn" onclick="submitSurvey()" 
             style="padding: 15px 40px; font-size: 1.2em; 
@@ -902,7 +927,7 @@
                    color: white; border: none; border-radius: 50px; 
                    cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
                    font-weight: bold; transition: transform 0.2s;">
-        🚀 アンケートを送信する
+        🚀 同意してアンケートを送信する
     </button>
     
     <p id="submit-status" style="margin-top: 15px; font-weight: bold;"></p>
@@ -1441,35 +1466,40 @@
         <a href="#evaluation-matrix" class="back-link">⬆️ 評価表に戻る</a>
     </div>
 </section>
-        <section style="background: #fff3cd; border-left: 5px solid #f39c12; padding: 20px; margin: 20px 0;">
-
-		    <h3>🔒 調査への参加にあたって</h3>
-		    
-		    <div class="consent-item">
-		        <h4>調査主体</h4>
-		        <p>本調査は関西学院大学 経営戦略研究科　谷脇圭介が修士論文の作成を目的として実施しています。</p>
-		    </div>
-		    
-		    <div class="consent-item">
-		        <h4>データの取り扱い</h4>
-		        <ul>
-		            <li>✓ 回答は完全匿名で処理され、個人を特定することはできません</li>
-		            <li>✓ 収集データは統計的処理のみに使用し、第三者への提供は行いません</li>
-		            <li>✓ 調査終了後、個票データは適切に廃棄します</li>
-		        </ul>
-		    </div>
-		    
-		    <div class="consent-item">
-		        <h4>回答者の権利</h4>
-		        <ul>
-		            <li>✓ 調査への参加は完全に任意です</li>
-		            <li>✓ いつでも回答を中止できます</li>
-		            <li>✓ 回答しない質問があっても構いません</li>
-		            <li>✓ 回答いただいた方に対しては必ず修士論文を後日送付いたします</li>
-		        </ul>
-		    </div>
-		    
-		</section>
+<section style="background: #fff3cd; border-left: 5px solid #f39c12; padding: 20px; margin: 20px 0;">
+    <h3>🔒 調査への参加にあたって</h3>
+    
+    <div class="consent-item">
+        <h4>調査主体</h4>
+        <p>本調査は関西学院大学 経営戦略研究科　谷脇圭介が修士論文の作成を目的として実施しています。</p>
+    </div>
+    
+    <div class="consent-item">
+        <h4>データの取り扱い</h4>
+        <ul>
+            <li>✓ 回答は完全匿名で処理され、個人を特定することはできません</li>
+            <li>✓ 収集データは統計的処理のみに使用し、第三者への提供は行いません</li>
+            <li>✓ 調査終了後、個票データは適切に廃棄します</li>
+        </ul>
+    </div>
+    
+    <div class="consent-item">
+        <h4>回答者の権利</h4>
+        <ul>
+            <li>✓ 調査への参加は完全に任意です</li>
+            <li>✓ いつでも回答を中止できます</li>
+            <li>✓ 回答しない質問があっても構いません</li>
+            <li>✓ 回答いただいた方に対しては必ず修士論文を後日送付いたします</li>
+        </ul>
+    </div>
+    
+    <!-- 同意に関する重要な注意書き -->
+    <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 8px; border: 2px solid #f39c12;">
+        <p style="margin: 0; font-weight: bold; color: #2c3e50;">
+            ⚠️ 「アンケートを送信する」ボタンをクリックすることで、上記の内容を理解し、調査への参加に同意したものとみなします。
+        </p>
+    </div>
+</section>
 
     </div>
 
@@ -1504,12 +1534,39 @@
     </script>
 
 <script>
-// ==== スティッキーヘッダー & フローティングパネル機能 ====
+// ==========================================
+// 1. 初期化とデバッグ機能
+// ==========================================
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('✅ ページ読み込み完了');
+    
+    // 質問パネルの初期状態を設定
+    const panel = document.getElementById('sticky-questions');
+    if (panel) {
+        panel.style.display = 'none';
+        console.log('✅ 質問パネル初期化完了');
+    }
+    
+    // 重要な要素の存在確認
+    const submitBtn = document.getElementById('submit-survey-btn');
+    const showQuestionsBtn = document.getElementById('show-questions-btn');
+    
+    console.log('送信ボタン:', submitBtn ? '✅ 検出' : '❌ 未検出');
+    console.log('質問表示ボタン:', showQuestionsBtn ? '✅ 検出' : '❌ 未検出');
+});
 
-// フローティングパネルのトグル
+// ==========================================
+// 2. 質問パネル表示機能
+// ==========================================
 function toggleStickyPanel() {
+    console.log('📋 質問パネルトグル実行');
     const panel = document.getElementById('sticky-questions');
     const btn = document.getElementById('show-questions-btn');
+
+    if (!panel || !btn) {
+        console.error('❌ パネルまたはボタンが見つかりません');
+        return;
+    }
 
     if (panel.style.display === 'none' || panel.style.display === '') {
         panel.style.display = 'block';
@@ -1523,110 +1580,61 @@ function toggleStickyPanel() {
 }
 
 function closeStickyPanel() {
-    document.getElementById('sticky-questions').style.display = 'none';
+    const panel = document.getElementById('sticky-questions');
     const btn = document.getElementById('show-questions-btn');
-    btn.innerHTML = '📋 質問を表示';
-    btn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+    
+    if (panel) panel.style.display = 'none';
+    if (btn) {
+        btn.innerHTML = '📋 質問を表示';
+        btn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+    }
 }
 
-// スクロール時の視覚的フィードバック
-window.addEventListener('scroll', function() {
-    const stickyHeader = document.querySelector('#evaluation-matrix table thead tr');
-    const matrixSection = document.getElementById('evaluation-matrix');
-
-    if (stickyHeader && matrixSection) {
-        const rect = matrixSection.getBoundingClientRect();
-
-        // 評価マトリックスが画面に入ったらヘッダーを強調
-        if (rect.top < 100 && rect.bottom > 0) {
-            stickyHeader.classList.add('scrolling');
-        } else {
-            stickyHeader.classList.remove('scrolling');
-        }
-    }
-});
-
-// キーボードショートカット (ESCで質問パネルを閉じる)
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        const panel = document.getElementById('sticky-questions');
-        if (panel && panel.style.display === 'block') {
-            closeStickyPanel();
-        }
-    }
-
-    // Alt + Qで質問パネルをトグル
-    if (event.altKey && event.key === 'q') {
-        event.preventDefault();
-        toggleStickyPanel();
-    }
-});
-
-// ページ読み込み完了時の初期化
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('✅ スティッキーヘッダー機能が初期化されました');
-
-    // 評価マトリックスのテーブルヘッダーがあるかチェック
-    const matrix = document.getElementById('evaluation-matrix');
-    const header = matrix ? matrix.querySelector('table thead') : null;
-
-    if (header) {
-        console.log('✅ 評価マトリックスのヘッダーが見つかりました');
-    } else {
-        console.warn('⚠️ 評価マトリックスのヘッダーが見つかりません');
-    }
-});
-
-// タブレット・モバイル対応
-let touchStartY = 0;
-document.addEventListener('touchstart', function(e) {
-    touchStartY = e.touches[0].clientY;
-});
-
-document.addEventListener('touchmove', function(e) {
-    const touchY = e.touches[0].clientY;
-    const deltaY = touchStartY - touchY;
-
-    // 下にスクロールした場合、質問パネルを自動で閉じる (オプション)
-    if (deltaY > 50) {
-        const panel = document.getElementById('sticky-questions');
-        if (panel && panel.style.display === 'block') {
-            // 大きくスクロールした場合は自動で閉じない（ユーザーが選択）
-            // closeStickyPanel(); 
-        }
-    }
-});
-
-// Google Apps ScriptのウェブアプリURL（ステップ2で取得）
-const SURVEY_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxt_FpC3wPsRlm1dFNhz9UxGHM5JRaHLxVwifKnpC27LitK7QlaBzWCxIm87PYbpruX/exec";
+// ==========================================
+// 3. アンケート送信機能（チェックボックス不要版）
+// ==========================================
+const SURVEY_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx7aCZIkJ_-12Odrs_c7_Ro8dGAkjIiSozyaGNTq8rEj93pbpV0xUtUhDqWliU2Quac/exec";
 
 function submitSurvey() {
+    console.log('📤 送信ボタンクリック');
+    
     const btn = document.getElementById('submit-survey-btn');
     const status = document.getElementById('submit-status');
     
     // 二重送信防止
-    if (btn.disabled) return;
-    btn.disabled = true;
-    btn.innerHTML = "📤 送信中...";
-    status.innerHTML = "";
-
-    // 同意チェックの確認
-    const consent = document.getElementById('informed-consent');
-    if (!consent || !consent.checked) {
-        alert("「調査への参加に同意します」にチェックを入れてください。");
-        resetSubmitButton();
-        // 同意セクションへスクロール
-        if (consent) consent.scrollIntoView({behavior: "smooth", block: "center"});
+    if (btn.disabled) {
+        console.log('⚠️ 二重送信防止');
         return;
     }
 
-    // 回答データの収集
+    // === 既存の名前入力欄から値を取得 ===
+    const nameInput = document.getElementById('respondent-name');
+    
+    if (!nameInput) {
+        console.error('❌ 名前入力欄が見つかりません');
+        alert('エラー：名前入力欄が見つかりません。ページを再読み込みしてください。');
+        return;
+    }
+    
+    const respondentName = nameInput.value.trim();
+    
+    if (!respondentName) {
+        alert('お名前を入力してください。');
+        nameInput.focus();
+        nameInput.style.borderColor = '#e74c3c';
+        nameInput.scrollIntoView({behavior: 'smooth', block: 'center'});
+        setTimeout(() => { nameInput.style.borderColor = '#ddd'; }, 3000);
+        return;
+    }
+
+    console.log('✅ 名前取得成功: ' + respondentName);
+
+    // === 回答データの収集 ===
     const rows = document.querySelectorAll('#evaluation-matrix tbody tr');
     let surveyData = [];
     let totalAnswered = 0;
 
     rows.forEach((row, index) => {
-        // 企業名を取得（No.とリンクを除く）
         const companyCell = row.cells[1];
         const companyName = companyCell.querySelector('a') ? 
                            companyCell.querySelector('a').textContent.trim() : 
@@ -1635,11 +1643,14 @@ function submitSurvey() {
         let rowData = {
             responseId: generateResponseId(),
             timestamp: new Date().toISOString(),
+            
+            // ★名前を各行データに追加（最重要）★
+            respondentName: respondentName,
+            
             companyNo: row.cells[0].textContent.trim(),
             companyName: companyName
         };
 
-        // 9つの質問の回答を取得
         const selects = row.querySelectorAll('select');
         let hasAnswer = false;
         
@@ -1652,29 +1663,56 @@ function submitSurvey() {
             }
         });
 
-        // 回答がある企業のみデータに含める
         if (hasAnswer) {
             surveyData.push(rowData);
         }
     });
 
+    console.log(`📊 収集データ: ${surveyData.length}社, ${totalAnswered}項目`);
+
     // 回答数チェック
     if (surveyData.length === 0) {
         alert("少なくとも1つの企業について回答を選択してください。");
-        resetSubmitButton();
         return;
     }
 
-    // 確認ダイアログ
-    if (!confirm(`${surveyData.length}社分の回答を送信します。よろしいですか？\n（回答済み項目数: ${totalAnswered}項目）`)) {
-        resetSubmitButton();
+    // 詳細な確認ダイアログ
+    const confirmMessage = `【送信内容の最終確認】
+
+👤 お名前: ${respondentName}
+📊 回答企業数: ${surveyData.length}社
+📝 回答項目数: ${totalAnswered}項目
+
+────────────────────────
+
+⚠️ 送信前の確認事項：
+
+✓ 回答内容を確認しました
+✓ データの取り扱いに同意します
+✓ 調査への参加に同意します
+
+────────────────────────
+
+上記に同意の上、アンケートを送信しますか？
+
+※送信後の修正はできません`;
+
+    if (!confirm(confirmMessage)) {
+        console.log('⚠️ 送信キャンセル');
         return;
     }
+
+    // 送信処理開始
+    btn.disabled = true;
+    btn.innerHTML = "📤 送信中...";
+    status.innerHTML = "";
+    
+    console.log('🚀 データ送信開始');
 
     // データ送信
     fetch(SURVEY_SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors', // Google Apps Script用
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -1683,23 +1721,25 @@ function submitSurvey() {
             metadata: {
                 totalCompanies: surveyData.length,
                 totalAnswers: totalAnswered,
-                submissionTime: new Date().toISOString()
+                submissionTime: new Date().toISOString(),
+                consentConfirmed: true,
+                respondentName: respondentName
             }
         })
     })
     .then(() => {
-        // 成功処理
+        console.log('✅ 送信成功');
         status.style.color = "#28a745";
         status.innerHTML = "✅ 送信が完了しました！ご協力ありがとうございました。";
         btn.innerHTML = "✅ 送信完了";
         btn.style.background = "#6c757d";
         
-        // 成功メッセージ
-        alert(`✅ アンケートが正常に送信されました！\n\n📊 送信内容:\n- 回答企業数: ${surveyData.length}社\n- 回答項目数: ${totalAnswered}項目\n\nご協力ありがとうございました。`);
+        alert(`✅ アンケートが正常に送信されました！\n\n📊 送信内容:\n- 回答企業数: ${surveyData.length}社\n- 回答項目数: ${totalAnswered}項目\n- お名前: ${respondentName}\n\nご協力ありがとうございました。`);
         
+        window.scrollTo({top: 0, behavior: 'smooth'});
     })
     .catch(error => {
-        console.error('送信エラー:', error);
+        console.error('❌ 送信エラー:', error);
         status.style.color = "#dc3545";
         status.innerHTML = "❌ 送信に失敗しました。インターネット接続を確認して再試行してください。";
         resetSubmitButton();
@@ -1707,17 +1747,28 @@ function submitSurvey() {
     });
 }
 
-// 送信ボタンのリセット
 function resetSubmitButton() {
     const btn = document.getElementById('submit-survey-btn');
-    btn.disabled = false;
-    btn.innerHTML = "🚀 アンケートを送信する";
+    if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = "🚀 同意してアンケートを送信する";
+    }
 }
 
-// 一意のレスポンスIDを生成
 function generateResponseId() {
     return 'resp_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 }
+
+// キーボードショートカット
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeStickyPanel();
+    }
+    if (event.altKey && event.key === 'q') {
+        event.preventDefault();
+        toggleStickyPanel();
+    }
+});
 
 // 送信ボタンのホバー効果
 document.addEventListener('DOMContentLoaded', function() {
@@ -1734,7 +1785,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9ab176096b320069","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
